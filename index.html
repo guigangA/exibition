@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>White Travel & Tour</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background-color: #98fb98;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 2rem;
+    }
+
+    .wrapper {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      overflow-x: auto;
+      gap: 20px;
+      scroll-snap-type: x mandatory;
+      width: 100%;
+    }
+
+    .card {
+      flex: 0 0 80px;
+      border-radius: 1rem;
+      background-size: cover;
+      background-position: center;
+      cursor: pointer;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-start;
+      transition: flex 0.6s cubic-bezier(.28,-0.03,0,.99);
+      box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
+      scroll-snap-align: start;
+    }
+
+    .card > .row {
+      color: white;
+      display: flex;
+      width: 100%;
+    }
+
+    .icon {
+      background: #223;
+      color: white;
+      border-radius: 12px;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 15px;
+      font-weight: bold;
+      font-size: 1.5rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      flex-shrink: 0;
+    }
+
+    .description {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      overflow-y: auto;
+      height: auto;
+      width: calc(100% - 90px);
+      padding: 15px 10px;
+      color: #000;
+      background-color: rgba(255,255,255,0.8);
+    }
+
+    .description p {
+      padding-top: 5px;
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+
+    .description h4 {
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .btn {
+      background-color: #ffd700;
+      border: none;
+      color: white;
+      padding: 8px 16px;
+      font-size: 14px;
+      margin-top: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      align-self: flex-start;
+    }
+
+    input {
+      display: none;
+    }
+
+    input:checked + label {
+      flex: 0 0 90%;
+    }
+
+    label[for="c1"] {
+      background-image: url('assets/img1.jpg');
+    }
+
+    label[for="c2"] {
+      background-image: url('assets/img2.jpg');
+    }
+
+    /* 針對手機和平板進行調整 */
+    @media (max-width: 768px) {
+      .card {
+        min-width: 90%;
+        height: auto;
+        flex-direction: column;
+      }
+
+      .card > .row {
+        flex-direction: column;
+      }
+
+      .icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+        margin: 10px auto 0;
+      }
+
+      .description {
+        width: 100%;
+        padding: 10px;
+      }
+
+      .description p, .description h4 {
+        font-size: 0.95rem;
+      }
+
+      .btn {
+        font-size: 13px;
+      }
+
+      input:checked + label {
+        flex: 0 0 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Explore the world</h1>
+  <div class="wrapper">
+    <div class="container">
+      <input type="radio" name="slide" id="c1" checked />
+      <label for="c1" class="card">
+        <div class="row">
+          <div class="icon">1</div>
+          <div class="description">
+            <h4>版本一</h4>
+            <button class="btn">BOOK NOW</button>
+            <p><strong>PRICE</strong><br />$720–$1170<br />1 Person</p>
+            <p><strong>Package Includes:</strong><br />
+              Destinations: Bangkok, Chiang Mai, Phuket<br />
+              Dinner cruise on the Chao Phraya River<br />
+              Duration: 7 days & 6 nights<br />
+              Accommodations: 5-star hotels<br />
+              Excursions: Guided city tours, cultural experiences, and adventure activities<br />
+              Meals: Daily breakfast and select dinners<br />
+              Transportation: Flights, airport transfers, and local transportation
+            </p>
+            <p><strong>MORE INFO:</strong><br />123 Anywhere St., Any City<br />123-456-7890</p>
+          </div>
+        </div>
+      </label>
+
+      <input type="radio" name="slide" id="c2" />
+      <label for="c2" class="card">
+        <div class="row">
+          <div class="icon">2</div>
+          <div class="description">
+            <h4>版本二</h4>
+            <button class="btn">BOOK NOW</button>
+            <p>
+              Destinations: Bangkok, Chiang Mai, Phuket<br />
+              Duration: 7 Days and 6 Nights<br />
+              Accommodations: 5 Star Hotels<br />
+              Excursions: Guided city tours, cultural experiences, and adventure activities<br />
+              Meals: Daily breakfast and select lunch and dinners
+            </p>
+            <p><strong>MORE INFO:</strong><br />123 Anywhere St., Any City<br />123-456-7890</p>
+            <p><strong>START FROM</strong><br />$800–$1300<br />1 PERSON</p>
+          </div>
+        </div>
+      </label>
+    </div>
+  </div>
+</body>
+</html>
