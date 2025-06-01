@@ -16,12 +16,19 @@
       background-color: #00FFFF;
     }
 
-    h1 {
-      text-align: center;
-      margin: 20px 0;
-      font-size: 2rem;
-      color: #FFF;
-    }
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 2rem;
+  color: #FFF;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 這是文字陰影 */
+  background-color: rgba(0, 0, 0, 0.2); /* 若要讓 box-shadow 更明顯 */
+  padding: 10px 20px; /* 給點內距，避免陰影貼太近 */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* 這是你要的 box-shadow */
+  display: inline-block;
+}
+
 
     .wrapper {
       width: 100%;
