@@ -164,6 +164,22 @@
         flex: 0 0 100%;
       }
     }
+
+    .bouncing-text {
+  display: inline-block;
+  animation: bounce 0.6s ease infinite;
+  animation-delay: 2s;      /* 可省略，或設一個起始延遲 */
+  animation-iteration-delay: 3s; /* 有些瀏覽器不支援，可透過 keyframes 模擬 */
+}
+
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  10%  { transform: translateY(-10px); }
+  20%  { transform: translateY(0); }
+  100% { transform: translateY(0); } /* 靜止一段時間再下次動畫 */
+}
+
+    
   </style>
 </head>
 <body>
@@ -175,7 +191,7 @@
         <div class="row">
           <div class="icon">1</div>
           <div class="description">
-            <h4>版本一</h4>
+            <h4>方案一</h4>
             <button class="btn">BOOK NOW</button>
             <p><strong>PRICE</strong><br />$720–$1170<br />1 Person</p>
             <p><strong>Package Includes:</strong><br />
@@ -197,7 +213,7 @@
         <div class="row">
           <div class="icon">2</div>
           <div class="description">
-            <h4>版本二</h4>
+            <h4>方案二</h4>
             <button class="btn">BOOK NOW</button>
             <p>
               Destinations: Bangkok, Chiang Mai, Phuket<br />
